@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.f159ef76.css",
-    "main.js": "/my-portfolio/static/js/main.c6db6e08.js",
+    "main.css": "/my-portfolio/static/css/main.1b56e6dc.css",
+    "main.js": "/my-portfolio/static/js/main.d0f52603.js",
     "static/js/488.21a3b654.chunk.js": "/my-portfolio/static/js/488.21a3b654.chunk.js",
+    "static/media/piano.mp3": "/my-portfolio/static/media/piano.f965e5f7b0f0e8ac7158.mp3",
+    "static/media/background.mp4": "/my-portfolio/static/media/background.16c13f89718f9c6167f6.mp4",
+    "static/media/consignment-app.jpg": "/my-portfolio/static/media/consignment-app.361b265ddd9f3d7b9502.jpg",
+    "static/media/vegan-bakery.jpg": "/my-portfolio/static/media/vegan-bakery.5b2b1629c2e61a393ddf.jpg",
+    "static/media/about-me.jpg": "/my-portfolio/static/media/about-me.0abc62c7f632ac2aa802.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.f159ef76.css.map": "/my-portfolio/static/css/main.f159ef76.css.map",
-    "main.c6db6e08.js.map": "/my-portfolio/static/js/main.c6db6e08.js.map",
+    "main.1b56e6dc.css.map": "/my-portfolio/static/css/main.1b56e6dc.css.map",
+    "main.d0f52603.js.map": "/my-portfolio/static/js/main.d0f52603.js.map",
     "488.21a3b654.chunk.js.map": "/my-portfolio/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f159ef76.css",
-    "static/js/main.c6db6e08.js"
+    "static/css/main.1b56e6dc.css",
+    "static/js/main.d0f52603.js"
   ]
 }
