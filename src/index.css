@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+
+#about {
+  background-color: #121212;
+}
+
+#projects {
+  background-color:#121212;
+}
+
+#services {
+  background-color: #121212;
+}
+
+#contact {
+  background-color: #121212;
+}

@@ -1,23 +1,212 @@
+/* General About Section */
 .about {
+    position: relative;
+    background-color: #121212; /* Dark gray for a modern UI */
+    color: #f0f0f0; /* Soft white for readability */
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    overflow: hidden;
+    font-family: "Arial", sans-serif;
+}
+
+/* Swift Code Animation */
+.code-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind everything */
+    pointer-events: none;
+}
+
+.code-row {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    animation: scrollRight 15s linear infinite; /* Smooth scrolling animation */
+}
+
+.code-line {
+    font-family: "SF Mono", "Consolas", "Courier New", monospace;
+    font-size: 1rem;
+    white-space: nowrap;
+    text-shadow: 0 0 8px, 0 0 12px; /* Subtle glowing effect */
+}
+
+/* Animation for Scrolling Rows */
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* About Section Container */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    z-index: 2; /* Above code animation */
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Section (Image) */
+.about-left {
+    flex-shrink: 0;
     text-align: center;
 }
 
-.about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #333;
+.about-image {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
 }
 
-.about p {
+/* Piano Button Positioned at the Top-Right Corner */
+.audio-button {
+    position: fixed;
+    top: 4rem;
+    left: 2rem;
+    background-color: #95c6fa;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it's always on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.audio-button:hover {
+    background-color: #0056b3;
+}
+
+/* Right Section (About Me Content) */
+.about-right {
+    flex: 1;
+}
+
+.about-right h2 {
+    font-size: 2rem;
+    color: #00bfff; /* Modern blue */
+    margin-bottom: 1rem;
+}
+
+.about-right p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 1rem auto;
+    margin-bottom: 1rem;
 }
 
-.about strong {
-    color: #007bff;
+.about-right .highlight {
+    color: #4ec9b0; /* Soft green for emphasis */
+}
+
+.about-right .accent {
+    color: #ffa500; /* Warm orange for accents */
+}
+
+.about-right .inspire {
+    color: #ff69b4; /* Vibrant pink for inspiration */
+}
+
+/* Columns Section */
+.columns-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.column {
+    flex: 1;
+    background: rgba(18, 18, 18, 0.9); /* Stronger semi-transparent dark background */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Stronger shadow for emphasis */
+    position: relative;
+    z-index: 1; /* Ensures it's above the code animation */
+}
+
+/* Section Headings */
+.animated-title {
+    font-size: 1.5rem;
+    color: #00bfff; /* Modern blue */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #00bfff; /* Underline for emphasis */
+    padding-bottom: 0.5rem;
+}
+
+/* List Styling */
+.what-i-do,
+.my-values,
+.fun-facts {
+    list-style: none;
+    padding: 0;
+}
+
+.what-i-do li,
+.my-values li,
+.fun-facts li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.what-i-do strong,
+.my-values strong,
+.fun-facts strong {
+    color: #4ec9b0; /* Emphasis green */
+}
+
+.fun-facts em {
+    color: #ffa500; /* Highlighted game titles */
+    font-style: italic;
+}
+
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columns-section {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .column {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-right p {
+        font-size: 1rem;
+    }
+
+    .audio-button {
+        font-size: 0.9rem;
+    }
 }

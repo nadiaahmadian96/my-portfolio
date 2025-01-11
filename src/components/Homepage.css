@@ -1,18 +1,102 @@
+/* Video Background */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero Section */
 .homepage {
+    position: relative;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #007bff, #6610f2);
+    overflow: hidden;
     color: white;
     text-align: center;
+    padding: 2rem;
 }
 
-.intro h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+/* Hero Section */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
 }
 
-.intro p {
-    font-size: 1.5rem;
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Highlight Text */
+.highlight {
+    color: #00d1ff; /* Light blue for a modern accent */
+}
+
+/* Animated Typing Effect */
+.animated-text {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: white; /* Ensure text is white */
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+}
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity for darker overlay */
+    z-index: 0;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking Cursor */
+@keyframes blink {
+    from {
+        border-right-color: transparent;
+    }
+    to {
+        border-right-color: white;
+    }
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
 }
